@@ -10,14 +10,13 @@
  align-content: center;
  margin: 40px;
  grid-template-columns: 1000px 440px;
- /*680px 400px*/
  grid-template-rows: 100px 824px 100px;
- /*87px 944px 87*/
  grid-template-areas:
   "area1 area4"
   "area2 area4"
   "area3 area4";
  background-color: #f3f5fc;
+ align-items: center;
 }
 
 .AluraIcon {
