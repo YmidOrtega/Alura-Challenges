@@ -32,26 +32,46 @@
 }
 
 .TextOutput {
+ width: 400px;
+ height: 944px;
  grid-area: area4;
  padding: 32px;
- border-radius: 10px;
- border: 2px solid black;
+ border-radius: 32px;
  background-color: white;
- align-items: center;
- justify-content: center;
  display: flex;
+ position: relative;
  flex-wrap: wrap;
+ justify-content: center;
+ align-content: center;
+ -webkit-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
+ -moz-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
+ box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
+}
+
+.TextOutput {
+ font-family: "Inter", sans-serif;
 }
 
 .TextOutput h2 {
+ text-align: center;
+ font-weight: 600;
+ width: 336px;
+ height: 122px;
  font-size: 24px;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 }
 
-.TextOutput h3 {
+.TextOutput h2>span:not(:first-child) {
  font-size: 16px;
+ font-weight: 400;
+
 }
 
 #copy {
+ font-family: "Inter", sans-serif;
  color: "Light blue";
  width: 336px;
  top: 885px;
