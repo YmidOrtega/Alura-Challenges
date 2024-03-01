@@ -4,12 +4,12 @@
  left: 50%;
  transform: translate(-50%, -50%);
  display: grid;
- width: 1440px;
- height: 1024px;
+ /*width: 1440px;
+ height: 1024px;*/
  justify-content: center;
  align-content: center;
- grid-template-columns: 1000px 440px;
- grid-template-rows: 100px 824px 100px;
+ grid-template-columns: 800px 352px;
+ grid-template-rows: 80px 659.2px 80px;
  grid-template-areas:
   "area1 area4"
   "area2 area4"
@@ -31,8 +31,8 @@
 }
 
 .TextOutput {
- width: 400px;
- height: 944px;
+ width: 320px;
+ height: 755.2px;
  grid-area: area4;
  margin: 40px 40px 40px 0;
  border-radius: 32px;
@@ -50,9 +50,9 @@
 .TextOutput h2 {
  text-align: center;
  font-weight: 600;
- width: 336px;
- height: 122px;
- font-size: 24px;
+ width: 268.8px;
+ height: 97.6px;
+ font-size: 19.2px;
  margin: 0;
  display: flex;
  flex-direction: column;
@@ -60,7 +60,7 @@
 }
 
 .TextOutput h2>span:not(:first-child) {
- font-size: 16px;
+ font-size: 12.8px;
  font-weight: 400;
 }
 
@@ -74,10 +74,10 @@
 
 #copy {
  font-family: 'Jost Variable';
- width: 336px;
- height: 67px;
+ width: 268.8px;
+ height: 53.6px;
  text-align: center;
- font-size: 16px;
+ font-size: 12.8px;
  cursor: pointer;
  border: 1px solid #0a3871;
  border-radius: 24px;
@@ -85,7 +85,7 @@
 
 .button-container {
  padding: 0 32px 32px 32px;
- width: 336px;
+ width: 268.8px;
  display: flex;
  justify-content: center;
  align-items: flex-end;
