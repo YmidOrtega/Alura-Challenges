@@ -4,8 +4,6 @@
  left: 50%;
  transform: translate(-50%, -50%);
  display: grid;
- /*width: 1440px;
- height: 1024px;*/
  justify-content: center;
  align-content: center;
  grid-template-columns: 800px 352px;
@@ -18,14 +16,118 @@
  align-items: center;
 }
 
+@media (max-width: 768px) {
+ .container {
+  top: 0;
+  left: 0;
+  transform: none;
+  grid-template-columns: 100%;
+  grid-template-rows: 159.2px 365.6px 224.62px 189.58px;
+  grid-template-areas:
+   "area1"
+   "area2"
+   "area3"
+   "area4";
+ }
+}
+
+/*.AluraIcon img {
+  display: block;
+  width: 80px;
+  height: 48px;
+}*/
+
+#svg-container {
+ display: block;
+ width: 80px;
+ height: 49px;
+}
+
+#svg-container path {
+ fill: transparent;
+ stroke: #0A3871;
+ stroke-dasharray: 200;
+ stroke-dashoffset: 200;
+ animation: draw 3s ease forwards;
+}
+
+@keyframes draw {
+ to {
+  stroke-dashoffset: 0;
+  fill: #0A3871;
+ }
+}
+
+
 .AluraIcon {
  grid-area: area1;
+ margin: 32px 0px 0px 32px;
+ display: flex;
+ align-items: flex-end;
+ order: 1
 }
+
+@media (max-width: 768px) {
+ .AluraIcon {
+  margin: 0px;
+ }
+}
+
+.AluraIcon h2 {
+ margin: -4px 0px;
+ font-family: "Inter", sans-serif;
+ color: #0A3871;
+ font-size: 26px;
+}
+
+.AluraIcon h2>span:not(:first-child) {
+ font-family: 'Jost Variable';
+ font-size: 12.8px;
+ font-weight: 400;
+}
+
 
 .TextInput {
  grid-area: area2;
+ order: 2;
 }
 
+#input::placeholder {
+ color: #0A3871;
+}
+
+#input {
+ padding: 0px;
+ background-color: transparent;
+ resize: none;
+ outline: none;
+ border: 0px solid;
+ width: 544px;
+ height: 500px;
+ margin: 134.4px 64px 0px 192px;
+ font-family: "Inter", sans-serif;
+ color: #0A3871;
+ font-size: 25.6px;
+ position: fixed;
+ top: 0;
+ overflow-y: hidden;
+}
+
+@media (max-width: 768px) {
+ .TextInput {
+  margin: 32.8px 32px;
+  align-self: flex-start;
+ }
+}
+
+@media (max-width: 768px) {
+ #input {
+  margin: 0;
+  width: calc(100vw - 64px);
+  position: static;
+  height: 300px;
+ }
+}
 
 
 
@@ -43,8 +145,17 @@
  justify-content: flex-end;
  flex-direction: column;
  align-items: center;
+ order: 3;
 }
 
+@media (max-width: 768px) {
+ .ButtonInput {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-self: flex-end;
+ }
+}
 
 .text-ButtonInput {
  width: 556.78px;
@@ -102,6 +213,22 @@
 
 
 
+#output {
+ padding: 0px;
+ background-color: transparent;
+ resize: none;
+ outline: none;
+ border: 0px;
+ width: 268.8px;
+ height: 70%;
+ font-family: "Inter", sans-serif;
+ color: #495057;
+ font-size: 19.2px;
+ position: fixed;
+ overflow-y: hidden;
+ display: none;
+
+}
 
 .TextOutput {
  width: 320px;
@@ -117,6 +244,7 @@
  -moz-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.8);
  font-family: "Inter", sans-serif;
+ order: 4;
 }
 
 .TextOutput h2 {
@@ -144,6 +272,12 @@
  align-content: flex-end;
 }
 
+@media (max-width: 768px) {
+ .text-TextOutput {
+  padding: 0px;
+ }
+}
+
 #copy {
  font-family: 'Jost Variable';
  width: 268.8px;
@@ -153,13 +287,42 @@
  cursor: pointer;
  border: 1px solid #0a3871;
  border-radius: 24px;
+ display: none;
 }
 
 .button-copy {
  padding: 0px 0px 32px;
- width: 268.8px;
  display: flex;
+ width: 268.8px;
  justify-content: center;
  align-items: flex-end;
+}
 
+@media (max-width: 768px) {
+ .button-copy {
+  width: 0;
+ }
+}
+
+@media (max-width: 768px) {
+ .TextOutput {
+  margin: 0px 32px 32px 32px;
+  width: calc(100vw - 64px);
+  height: 106.4px;
+  padding: 25.6px;
+  align-self: flex-end
+ }
+}
+
+@media (max-width: 768px) {
+ .TextOutput h2 {
+  justify-content: center;
+  width: auto;
+ }
+}
+
+@media (max-width: 768px) {
+ .text-TextOutput img {
+  display: none;
+ }
 }

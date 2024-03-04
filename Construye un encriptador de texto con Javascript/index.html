@@ -9,6 +9,7 @@
   <link name="alternate" href="" hreflang="es" />
   <link rel="icon" type="image/svg+xml" href="icon\logo.svg" />
   <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="src/style1.css" />
 
 </head>
 
@@ -17,14 +18,27 @@
   <div class="container">
 
     <div class=" AluraIcon">
+      <div id="svg-container"></div>
 
-      <img src="icon\logo.svg" alt="logo del curso de Alura Latam" />
+      <script>
+        fetch('icon/logo.svg')
+          .then(response => response.text())
+          .then(svgData => {
+            document.getElementById('svg-container').innerHTML = svgData;
+          });
+      </script>
 
+      <!--<img class="AIcon" src="icon\logo.svg" alt="logo del curso de Alura Latam"/>-->
+
+      <h2>
+        <span>lura Latam</span>
+        <span>By: Ymid </span>
+      </h2>
     </div>
 
     <div class="TextInput">
 
-      <h1>ingresa tu texto aquí</h1>
+      <textarea id="input" placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
 
     </div>
 
@@ -44,6 +58,7 @@
 
     <div class="TextOutput">
       <div class="text-TextOutput">
+        <textarea id="output" readonly placeholder=""></textarea>
 
         <img src="icon/draw.svg" alt="icono del resultado del texto" width="268.8px" height="243.2px" />
 
