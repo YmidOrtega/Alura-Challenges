@@ -1,9 +1,9 @@
-const enter = 'enter'
-const imes = 'imes'
-const ai = 'ai'
-const ober = 'ober'
-const ufat = 'ufat'
-const copyText = document.getElementById('output')
+const enter = 'enter';
+const imes = 'imes';
+const ai = 'ai';
+const ober = 'ober';
+const ufat = 'ufat';
+const resultado = document.getElementById('output');
 
 function vowelReplacement (vowelText) {
  let vowel = vowelText
@@ -28,38 +28,45 @@ function wordReplacement (wordText) {
 
 function encriptar() {
   const text = document.getElementById('input').value;
+  if (text.trim() === '') {
+    alert('Por favor, ingrese un texto para encriptar.');
+    return;
+  }
   const encryptedText = vowelReplacement(text);
-  document.getElementById('output').innerText = encryptedText;
-  eraseText();
+  resultado.innerText = encryptedText;
+  eraseTextInput();
+  document.getElementById('copy').removeAttribute('hidden');
+
+}
+
+function desencriptar() { 
+  const text = document.getElementById('input').value;
+  if (text.trim() === '') {
+    alert('Por favor, ingrese un texto para encriptar.');
+    return;
+  }
+  const decryptedText = wordReplacement(text);
+  resultado.innerText = decryptedText;
+  eraseTextInput();
+  document.getElementById('copy').removeAttribute('hidden');
+  
+}
+
+function copiar() {
+  const copyText = resultado.value;
+  resultado.select();
+  navigator.clipboard.writeText(copyText);
+  window.getSelection().removeAllRanges();
+  console.log(copyText);
   return;
-
 }
 
-function desencriptar(textoEncriptado) { 
- const text = document.getElementById('input').value;
- const decryptedText = wordReplacement(text);
- document.getElementById('output').innerText = decryptedText;
- eraseText();
- return;
-}
-
-function copiar(text) {
-  copyText.value = text;
-  eraseTextOutput();
-  return;
-}
-
-function eraseText() {
+function eraseTextInput() {
   document.getElementById('input').value = '';
   return;
-
 }
 
 function eraseTextOutput() {
- copyText.value = '';
- return;
+  resulto.value = '';
+  return;
 }
-
-
-encriptar();
-desencriptar();
