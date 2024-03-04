@@ -7,24 +7,20 @@
   <title>Encriptador de texto</title>
   <meta name="description" content="Pagina realizada para el Challenge propuesto por Alura Latam" />
   <link name="alternate" href="" hreflang="es" />
-  <link rel="icon" type="image/svg+xml" href="icon\logo.svg" />
+  <link rel="icon" type="image/svg+xml" href="icon/logo.svg" />
   <link rel="stylesheet" href="src/style.css" />
-  <link rel="stylesheet" href="src/style1.css" />
-
 </head>
 
 <body>
-
   <div class="container">
-
-    <div class=" AluraIcon">
+    <div class="AluraIcon">
       <div id="svg-container"></div>
 
       <script>
-        fetch('icon/logo.svg')
-          .then(response => response.text())
-          .then(svgData => {
-            document.getElementById('svg-container').innerHTML = svgData;
+        fetch("icon/logo.svg")
+          .then((response) => response.text())
+          .then((svgData) => {
+            document.getElementById("svg-container").innerHTML = svgData;
           });
       </script>
 
@@ -37,23 +33,20 @@
     </div>
 
     <div class="TextInput">
-
       <textarea id="input" placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
-
     </div>
 
     <div class="ButtonInput">
       <div class="text-ButtonInput">
-        <h2> <i class="fas fa-exclamation-circle"></i> <img src="icon/exclamation-circle.svg" width="3%"> Apenas letras
-          minúsculas e sem acento.</h2>
+        <h2>
+          <i class="fas fa-exclamation-circle"></i>
+          <img src="icon/exclamation-circle.svg" width="3%" /> Solo letras minúsculas y sin acentos.
+        </h2>
       </div>
       <div class="button-decipher">
-
         <button id="decipher1" onclick="encriptar()">Encriptar</button>
         <button id="decipher2" onclick="desencriptar()">Desencriptar</button>
-
       </div>
-
     </div>
 
     <div class="TextOutput">
@@ -70,15 +63,13 @@
       <div class="button-copy">
         <button id="copy" onclick="copiar()">Copiar</button>
       </div>
-
     </div>
-
   </div>
 </body>
 <i class="fas fa-exclamation-circle"></i>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-  @import url('https://cdn.jsdelivr.net/fontsource/fonts/jost:vf@latest/latin-wght-normal.woff2');
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+  @import url("https://cdn.jsdelivr.net/fontsource/fonts/jost:vf@latest/latin-wght-normal.woff2");
 </style>
 
 <script src="script.js"></script>

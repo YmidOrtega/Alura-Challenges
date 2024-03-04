@@ -45,7 +45,7 @@
 
 #svg-container path {
  fill: transparent;
- stroke: #0A3871;
+ stroke: #0a3871;
  stroke-dasharray: 200;
  stroke-dashoffset: 200;
  animation: draw 3s ease forwards;
@@ -54,17 +54,16 @@
 @keyframes draw {
  to {
   stroke-dashoffset: 0;
-  fill: #0A3871;
+  fill: #0a3871;
  }
 }
-
 
 .AluraIcon {
  grid-area: area1;
  margin: 32px 0px 0px 32px;
  display: flex;
  align-items: flex-end;
- order: 1
+ order: 1;
 }
 
 @media (max-width: 768px) {
@@ -76,16 +75,15 @@
 .AluraIcon h2 {
  margin: -4px 0px;
  font-family: "Inter", sans-serif;
- color: #0A3871;
+ color: #0a3871;
  font-size: 26px;
 }
 
 .AluraIcon h2>span:not(:first-child) {
- font-family: 'Jost Variable';
+ font-family: "Jost Variable";
  font-size: 12.8px;
  font-weight: 400;
 }
-
 
 .TextInput {
  grid-area: area2;
@@ -93,7 +91,7 @@
 }
 
 #input::placeholder {
- color: #0A3871;
+ color: #0a3871;
 }
 
 #input {
@@ -106,7 +104,7 @@
  height: 500px;
  margin: 134.4px 64px 0px 192px;
  font-family: "Inter", sans-serif;
- color: #0A3871;
+ color: #0a3871;
  font-size: 25.6px;
  position: fixed;
  top: 0;
@@ -128,13 +126,6 @@
   height: 300px;
  }
 }
-
-
-
-
-
-
-
 
 .ButtonInput {
  grid-area: area3;
@@ -160,7 +151,6 @@
 .text-ButtonInput {
  width: 556.78px;
  margin: 0;
-
 }
 
 .text-ButtonInput h2 {
@@ -169,11 +159,10 @@
  margin: 0;
  font-size: 9.6px;
  font-weight: 400;
-
 }
 
 #decipher1 {
- font-family: 'Jost Variable';
+ font-family: "Jost Variable";
  width: 268.8px;
  height: 53.6px;
  text-align: center;
@@ -181,19 +170,19 @@
  cursor: pointer;
  border: 1px solid #0a3871;
  border-radius: 24px;
- background-color: #0A3871;
+ background-color: #0a3871;
  color: white;
 }
 
 #decipher2 {
- font-family: 'Jost Variable';
+ font-family: "Jost Variable";
  width: 268.8px;
  height: 53.6px;
  text-align: center;
  font-size: 12.8px;
  cursor: pointer;
  border: 1px solid #0a3871;
- border-radius: 24px
+ border-radius: 24px;
 }
 
 .button-decipher {
@@ -201,17 +190,7 @@
  gap: 19.2px;
  display: flex;
  justify-content: center;
-
 }
-
-
-
-
-
-
-
-
-
 
 #output {
  padding: 0px;
@@ -227,7 +206,6 @@
  position: fixed;
  overflow-y: hidden;
  display: none;
-
 }
 
 .TextOutput {
@@ -279,7 +257,7 @@
 }
 
 #copy {
- font-family: 'Jost Variable';
+ font-family: "Jost Variable";
  width: 268.8px;
  height: 53.6px;
  text-align: center;
@@ -310,7 +288,7 @@
   width: calc(100vw - 64px);
   height: 106.4px;
   padding: 25.6px;
-  align-self: flex-end
+  align-self: flex-end;
  }
 }
 
