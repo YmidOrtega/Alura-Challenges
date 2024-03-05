@@ -6,7 +6,7 @@ const ufat = "ufat";
 const resultado = document.getElementById("output");
 
 function check(e) {
-  tecla = (document.all) ? e.keyCode : e.which;
+  tecla = (document.documentElement) ? e.keyCode : e.which;
   if (tecla == 8) {
       return true;
   }
