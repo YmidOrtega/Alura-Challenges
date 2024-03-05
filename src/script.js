@@ -5,6 +5,17 @@ const ober = "ober";
 const ufat = "ufat";
 const resultado = document.getElementById("output");
 
+function TextInput () {
+ tecla = (document.all) ? e.keyCode : e.which;
+  if (tecla == 8) {
+   return true;
+  }
+
+  patron = /[a-z]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
 function vowelReplacement(vowelText) {
  let vowel = vowelText
   .replace(/e/g, enter)
